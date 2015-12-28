@@ -54,6 +54,20 @@
                                 ?>
                             </select>
                     </div>
+                                        <div id="salary_detail_div3">
+                        <?= $t->_("position");?> :
+                        <span>
+                            <select class="select" data-toggle="select" name="cond[position]" id="position">
+                                <option value="" ><?= $t->_("position");?></option>
+                                <?php
+                                foreach ($usernames as $username) {
+                                    ?>
+                                    <option value="<?php echo $username->position; ?>"><?php echo $username->position; ?></option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                    </div>
                     <div id="salary_detail_div4">
                          <?= $t->_("salary_rate");?> :
                         <select class="select" data-toggle="select" name="cond[salary]" id="salary_rate">
